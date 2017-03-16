@@ -1,0 +1,23 @@
+{
+  "name": "tessel-boiler",
+  "version": "1.0.0",
+  "description": "Webpack boiler for running ES6/JSX on Tessel microcontrollers",
+  "main": "./build/index.js",
+  "scripts": {
+    "preinstall" : "npm install t2-cli -g",
+    "build-deploy": "webpack && t2 push ./build/",
+    "build-run": "webpack && t2 run ./build/"
+  },
+  "keywords": ["tessel", "webpack", "es6", "react", "jsx"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-env": "^1.2.2",
+    "webpack": "^2.2.1",
+    "yarn": "^0.21.3"
+  },
+  "dependencies": {}
+}
