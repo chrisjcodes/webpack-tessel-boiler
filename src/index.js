@@ -1,14 +1,8 @@
-import someUtil from 'Utilities/someUtil';
+const tessel = require.context('./', false, 'tessel');
+import blinky from 'Utilities/blinky';
 
-const obj1 = {
-    thing1: 1,
-    thing2: 2,
-};
+tessel.led[2].on();
 
-const obj2 = {
-    thing3: 3,
-    thing4: 4,
-    myFunc: someUtil,
-};
+setInterval(blinky, 100);
 
-export default { ...obj1, ...obj2 }
+console.log("I'm blinking! (Press CTRL + C to stop)");

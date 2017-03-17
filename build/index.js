@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -74,44 +74,62 @@
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
+var tessel = !(function webpackMissingModule() { var e = new Error("Cannot find module \".\""); e.code = 'MODULE_NOT_FOUND';; throw e; }()).context('./', false, 'tessel');
 
 exports.default = function () {
-    return "something else!";
+  tessel.led[2].toggle();
+  tessel.led[3].toggle();
 };
 
 /***/ }),
 /* 1 */
+/***/ (function(module, exports) {
+
+function webpackEmptyContext(req) {
+	throw new Error("Cannot find module '" + req + "'.");
+}
+webpackEmptyContext.keys = function() { return []; };
+webpackEmptyContext.resolve = webpackEmptyContext;
+module.exports = webpackEmptyContext;
+webpackEmptyContext.id = 1;
+
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+function webpackEmptyContext(req) {
+	throw new Error("Cannot find module '" + req + "'.");
+}
+webpackEmptyContext.keys = function() { return []; };
+webpackEmptyContext.resolve = webpackEmptyContext;
+module.exports = webpackEmptyContext;
+webpackEmptyContext.id = 2;
+
+
+/***/ }),
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
+var _blinky = __webpack_require__(0);
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _someUtil = __webpack_require__(0);
-
-var _someUtil2 = _interopRequireDefault(_someUtil);
+var _blinky2 = _interopRequireDefault(_blinky);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var obj1 = {
-    thing1: 1,
-    thing2: 2
-};
+var tessel = !(function webpackMissingModule() { var e = new Error("Cannot find module \".\""); e.code = 'MODULE_NOT_FOUND';; throw e; }()).context('./', false, 'tessel');
 
-var obj2 = {
-    thing3: 3,
-    thing4: 4,
-    myFunc: _someUtil2.default
-};
 
-exports.default = _extends({}, obj1, obj2);
+tessel.led[2].on();
+
+setInterval(_blinky2.default, 100);
+
+console.log("I'm blinking! (Press CTRL + C to stop)");
 
 /***/ })
 /******/ ]);
