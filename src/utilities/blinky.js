@@ -1,4 +1,4 @@
-const tessel = require.context('./', false, 'tessel');
+const tessel = require('tessel');
 
 export default () => {
   tessel.led[2].toggle();

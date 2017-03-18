@@ -1,4 +1,4 @@
-const tessel = require.context('./', false, 'tessel');
+const tessel = require('tessel');
 import blinky from 'Utilities/blinky';
 
 tessel.led[2].on();
