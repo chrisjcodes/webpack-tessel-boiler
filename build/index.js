@@ -1,4 +1,4 @@
-/******/ (function(modules) { // webpackBootstrap
+(function(e, a) { for(var i in a) e[i] = a[i]; }(exports, /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -70,7 +70,7 @@
 /* 0 */
 /***/ (function(module, exports) {
 
-module.exports = tessel;
+module.exports = require("tessel");
 
 /***/ }),
 /* 1 */
@@ -106,4 +106,4 @@ setInterval(blinky, 100);
 console.log("I'm blinking! (Press CTRL + C to stop)");
 
 /***/ })
-/******/ ]);
+/******/ ])));
