@@ -63,11 +63,17 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports) {
+
+module.exports = tessel;
+
+/***/ }),
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -76,7 +82,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var tessel = !(function webpackMissingModule() { var e = new Error("Cannot find module \".\""); e.code = 'MODULE_NOT_FOUND';; throw e; }()).context('./', false, 'tessel');
+var tessel = __webpack_require__(0);
 
 exports.default = function () {
   tessel.led[2].toggle();
@@ -84,50 +90,18 @@ exports.default = function () {
 };
 
 /***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
-function webpackEmptyContext(req) {
-	throw new Error("Cannot find module '" + req + "'.");
-}
-webpackEmptyContext.keys = function() { return []; };
-webpackEmptyContext.resolve = webpackEmptyContext;
-module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 1;
-
-
-/***/ }),
 /* 2 */
-/***/ (function(module, exports) {
-
-function webpackEmptyContext(req) {
-	throw new Error("Cannot find module '" + req + "'.");
-}
-webpackEmptyContext.keys = function() { return []; };
-webpackEmptyContext.resolve = webpackEmptyContext;
-module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 2;
-
-
-/***/ }),
-/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _blinky = __webpack_require__(0);
-
-var _blinky2 = _interopRequireDefault(_blinky);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var tessel = !(function webpackMissingModule() { var e = new Error("Cannot find module \".\""); e.code = 'MODULE_NOT_FOUND';; throw e; }()).context('./', false, 'tessel');
-
+var tessel = __webpack_require__(0);
+var blinky = __webpack_require__(1);
 
 tessel.led[2].on();
 
-setInterval(_blinky2.default, 100);
+setInterval(blinky, 100);
 
 console.log("I'm blinking! (Press CTRL + C to stop)");
 
