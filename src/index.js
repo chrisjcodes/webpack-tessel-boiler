@@ -1,5 +1,5 @@
-const tessel = require('tessel');
-const blinky =  require('Utilities/blinky');
+import tessel from 'tessel';
+import blinky from 'Utilities/blinky';
 
 tessel.led[2].on();
 

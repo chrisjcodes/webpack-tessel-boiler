@@ -1,6 +1,6 @@
-const tessel = require('tessel');
+import tessel from 'tessel';
 
-export default () => {
+export default function() {
   tessel.led[2].toggle();
   tessel.led[3].toggle();
 }

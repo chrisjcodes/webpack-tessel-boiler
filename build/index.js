@@ -82,12 +82,17 @@ module.exports = require("tessel");
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var tessel = __webpack_require__(0);
 
 exports.default = function () {
-  tessel.led[2].toggle();
-  tessel.led[3].toggle();
+  _tessel2.default.led[2].toggle();
+  _tessel2.default.led[3].toggle();
 };
+
+var _tessel = __webpack_require__(0);
+
+var _tessel2 = _interopRequireDefault(_tessel);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
 /* 2 */
@@ -96,12 +101,19 @@ exports.default = function () {
 "use strict";
 
 
-var tessel = __webpack_require__(0);
-var blinky = __webpack_require__(1);
+var _tessel = __webpack_require__(0);
 
-tessel.led[2].on();
+var _tessel2 = _interopRequireDefault(_tessel);
 
-setInterval(blinky, 100);
+var _blinky = __webpack_require__(1);
+
+var _blinky2 = _interopRequireDefault(_blinky);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_tessel2.default.led[2].on();
+
+setInterval(_blinky2.default, 100);
 
 console.log("I'm blinking! (Press CTRL + C to stop)");
 
