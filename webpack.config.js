@@ -1,4 +1,4 @@
-var path = require('path');
+const path = require('path');
 
 module.exports = {
     entry: path.resolve(__dirname, './src/index.js'),
@@ -14,7 +14,7 @@ module.exports = {
         },
         extensions: ['.js', '.jsx']
     },
-    externals: "tessel",
+    externals: ["tessel", "firebase", "johnny-five", "tessel-io"],
     module: {
         rules: [
             { test: /\.(js|jsx)$/, use: 'babel-loader' },
